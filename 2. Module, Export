@@ -124,9 +124,17 @@ var ayush = new Person("ayush", "joshi");
 //or any other object created usng Person will get the method , therfore it will print thr greeting.
 
 ayush.greet();
+var kush = new Person("kish", "joshi");
+kush.greet();
 
+output is : Hello ayush joshi
+Hello kish joshi
+
+// beacse both get the greet method through prototypal inheritance
 
 ----------------------------------------------
+
+
 
 
 
