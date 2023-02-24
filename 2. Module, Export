@@ -62,4 +62,25 @@ I want it to.
 
 It can't go get its variables, its functions, its objects.
 
-We would have to explicitly make that available,
+We would have to explicitly make that available, and we do that by using module.exports = greet;
+
+now we can store that greet and call it in the app.js
+like
+
+greet.js
+=================
+var greet = function(){
+console.log("Hello There!");
+}
+module.exports = greet; // here i am exposing only what we want to, that is greet in this case
+
+===============
+app.js 
+======
+var greet = require('./greet.js');
+greet();// it will print Hello there 
+// but if we would have not exported greet then it will show error.
+=====
+
+
+
