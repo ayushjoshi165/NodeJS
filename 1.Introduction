@@ -3,3 +3,11 @@ Node is written in C++ as JavaScript V8 engine is also written in C++
 thier is a herirracy of language rom amachine to human machine languae - > assebly language - > c++ -> javascript
 
 ECMA sccript is a standard that how should javascript work 
+
+V8 sits at the core of node JS
+
+
+Javascript is converted by V8 which is written in c++ to machine code , So I can write any code and use V8 to ad features to JAvascript
+
+
+
