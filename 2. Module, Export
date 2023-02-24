@@ -37,3 +37,29 @@ A lot of major programming languages
 do not have this feature.
 
 JavaScript does.
+
+-------------------------------------------
+
+we created a module called greet.js and accessed it through app.js using require('./greet.js'), this will print the console from greet.js but we can not 
+
+call the function efined in greet.js by its name because its protected 
+
+Remember we said that a module should,
+
+not only encapsulate code, but it should
+
+make sure that the code that's in the module
+
+doesn't accidentally or unintentionally affect
+
+the rest of the code in the application.
+
+The code inside greet.js is protected.
+
+App.js doesn't simply have access to it unless
+
+I want it to.
+
+It can't go get its variables, its functions, its objects.
+
+We would have to explicitly make that available,
