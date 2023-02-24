@@ -82,5 +82,16 @@ greet();// it will print Hello there
 // but if we would have not exported greet then it will show error.
 =====
 
+FUNCTION CONSTRUCTOR : 
+
+function (firstname, lastname){
+this.firstname = "ayush";
+this.lsstname = "joshi";
+
+}
+
+
+// now if we create object using new keyword it will create an emply this object and when can attach value to it using function constructor.
+
 
 
