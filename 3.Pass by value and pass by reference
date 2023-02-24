@@ -1,0 +1,24 @@
+// pass by value
+function change(g) {
+  g = 1;
+}
+
+var b = 2;
+change(b);
+console.log(b);
+
+//output is 2, so what happened inside the change function didnt imapct the value of b, becase b is premitive and inside the function g created 
+// a copy of b  the value without affecting its value.
+
+// pass by reference
+
+// remeber objects in Javascript are passed by reference 
+
+a = {};
+function changeObj(a){
+a.prop1 = {};
+a.prop2 = function(){};
+}
+b.prop1 = {};
+changeObj(b);
+console.log(b);
