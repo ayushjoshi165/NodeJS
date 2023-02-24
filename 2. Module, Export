@@ -1,0 +1,25 @@
+So NodeJS implements something called CommonJS modules.
+
+Oh well actually, one more big word alert.
+
+CommonJS modules: that just means an agreed upon
+
+standard for how code modules should be structured.
+
+You may here the phrase CommonJS.
+
+It's just a set of standards.
+
+So NodeJS said the way that common
+
+JS modules, the way that standard
+
+says the way modules should be structured,
+
+we agree with that.
+
+So we're going to design a way for you to structure
+
+your Javascript code in modules that
+
+will follow this standard.
