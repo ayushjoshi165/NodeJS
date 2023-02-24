@@ -10,4 +10,9 @@ V8 sits at the core of node JS
 Javascript is converted by V8 which is written in c++ to machine code , So I can write any code and use V8 to ad features to JAvascript
 
 
+SO we used the above feature to add functionality to javascript
+
+NodeJs is nothing but a C++ program embedded with V8 that allows us to do so.
+
+
 
