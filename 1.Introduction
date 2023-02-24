@@ -15,4 +15,7 @@ SO we used the above feature to add functionality to javascript
 NodeJs is nothing but a C++ program embedded with V8 that allows us to do so.
 
 
+NodeJS is not javascript, its build to use javascript to use as serve side programming 
+
+
 
