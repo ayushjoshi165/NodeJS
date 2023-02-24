@@ -22,3 +22,14 @@ a.prop2 = function(){};
 b.prop1 = {};
 changeObj(b);
 console.log(b);
+
+
+//So remember this,
+
+when I pass in an object, I can add properties
+
+and change properties on that object,
+
+and that will be reflected outside of the function
+
+because of pass by reference.
