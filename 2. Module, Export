@@ -23,3 +23,17 @@ So we're going to design a way for you to structure
 your Javascript code in modules that
 
 will follow this standard.
+
+-------------------------------------------
+
+First-class functions: everything you can do
+
+with other types, like strings or numbers,
+
+you can do with functions.
+
+A lot of major programming languages
+
+do not have this feature.
+
+JavaScript does.
