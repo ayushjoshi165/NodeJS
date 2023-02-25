@@ -1,0 +1,42 @@
+app.js
+------------------
+var greet = require("./greet");// here while running using node app.js engine wont find greet so it will look for index.js in greet folder and then it 
+// will find and can use all the required functionality which is exported, see below the example 
+
+greet.english();
+greet.spanish();
+---------------------
+
+greet(folder)--> index.js
+
+var english = require("./english");
+var spanish = require("./spanish");
+
+module.exports =  {
+  english: english,
+  spanish: spanish
+};
+---------------------------
+greet(folder) -- > english.js, spanish.js
+
+var greetings = require("./greetings.json");
+var greet = function () {
+  console.log(greetings.en);
+};
+
+module.exports = greet;
+----------
+var greetings = require("./greetings.json");
+
+var greet = function () {
+  console.log(greetings.es);
+};
+
+module.exports = greet;
+-------------------------------------------
+
+We also saw how engine use JSON file 
+
+we created greeting.json file and then we used it using require, here engine will convert thr JSON content to object for use as we saw using debugging 
+
+and then passed the en ans es values instead of hardcoding hello and Hola!
