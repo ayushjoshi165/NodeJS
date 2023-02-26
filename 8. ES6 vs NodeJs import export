@@ -34,6 +34,9 @@ import greet, { greet2 } from "./greet.js";
 
 greet();
 greet2();
--------------------------------------------
+------------------------------------------
 
-If we are using 
+
+there is a useful blog on this : https://www.scaler.com/topics/javascript/import-js-file-in-js/
+
+checkout this.
