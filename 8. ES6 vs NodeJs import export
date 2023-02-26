@@ -1,0 +1,39 @@
+If we are using import export then it is ES6 features so we need to add type="module" in script to run out main.js/ app.js file with index.html
+
+If you are going to use ES6 modules in a node js environment, remember to name your files with .mjs extension or set "type": "module" in the package.json file.
+
+also we learnt about default export - one file can conatain ony one default export ans we can use name alias for importing it i.e without using {} brackets  
+
+but we need curley bracket if its not a default export 
+example 
+
+greet.js
+
+export default function greet() {
+  console.log("Hello there");
+}
+
+
+export function greet2(){
+
+  console.log("Greetings!!!!");
+}
+
+-----
+app.js
+
+import greet from "./greet.js";
+import { greet2 } from "./greet.js";
+
+greet();
+greet2();
+
+we can combile default and other imports as well like below 
+
+import greet, { greet2 } from "./greet.js";
+
+greet();
+greet2();
+-------------------------------------------
+
+If we are using 
