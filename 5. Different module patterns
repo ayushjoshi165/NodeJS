@@ -70,3 +70,27 @@ var greeting = reqire("./greet3").greet;
 greeting();
 
 // both will work
+
+
+3) Using function constructor
+
+// using function constructor
+
+function Greetr() {
+  this.greeting = "Hello World 3!";
+
+  this.greet = function () {
+    console.log(this.greeting);
+  };
+}
+
+module.exports = new Greetr();
+-----------
+
+app.js
+
+var greet3 = require("./greet3");
+greet3.greet();
+------------------
+
+
