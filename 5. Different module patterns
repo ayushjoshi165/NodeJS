@@ -20,3 +20,53 @@ greet : greet
 var greeting = require("./greet5.js");
 
 greeting.greet();
+
+
+
+remember that if you simply return an object
+
+from require, that will be cached
+
+and any other call to that same file
+
+via the require function will get you back
+
+this same object everywhere.
+
+2) Overrriding export with the function 
+
+
+greet2.js
+----
+module.exports = function(){
+
+console.log("Hello World 2");
+}
+-----
+app.js
+-----
+
+var greeting = require("./greet2.js");
+greting();
+
+
+3) Instead of replacing module.exports with function I can add a property to it
+
+greet3.js
+
+module.exports.greet = function (){
+console.log("Hello 3");
+}
+
+-------
+app.js 
+
+var greeting = require("./greet3");
+greeting.greet();
+
+0r I can do 
+
+var greeting = reqire("./greet3").greet;
+greeting();
+
+// both will work
