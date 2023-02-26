@@ -1,0 +1,38 @@
+ES6 comes up with a way to export the function and then import it 
+
+example :
+greet.js
+
+export function(){
+console.log("Hello this is exported function ");
+}
+
+
+
+app.js
+
+import * as greeting from 'greet';
+
+here we are importing all the values which are exported we can also import perticulat values and assign it to a variable using "as"
+
+import greet as greeting from "greet";
+
+
+---------------------
+
+so if you see module.exports its NOdeJS and if you see import export its ES6
+
+----------------------------
+
+To require code libraries we simple require it by name we dont need to provide the local address 
+so if you see something require without path its mostly the core libraby
+
+var util = require("util");
+
+we can use same name for out module but we need to pass the local addrss as we do bt "./" or "../../"
+instead we should use a different name
+
+------------------------------------------------
+
+
+
