@@ -91,6 +91,41 @@ app.js
 
 var greet3 = require("./greet3");
 greet3.greet();
+greet3.greeting = "Hello again"
 ------------------
+
+In the above pattern if we create a new object referecing the same require then we will get the cache object in return, why? we saw that by debuggng the require 
+function 
+
+var greeting3b = require("./greet3");
+
+we will see hello again in console insted of creating a new object it will reference to the same object as it was cached 
+-------------------------------
+
+What if dont want to get returned the same object 
+
+4). Instead of returnig the object created by function constructor we will return the cinstructor function then we will create the object in app.js 
+// using that constructor function and then we will get the new object everytime we create using that function constructor
+
+greet4.js
+
+function Greetr() {
+  this.greeting = "Hello World 3!";
+
+  this.greet = function () {
+    console.log(this.greeting);
+  };
+}
+
+module.exports = Greetr;
+-------
+now in app.js we will create a new object using the exported Greetr function constructor so we will get different object 
+
+
+var Greet4 = require("./greet4");
+var grte = new Greet4();
+
+grtr.greet();
+----------------------------------------------------------------
 
 
