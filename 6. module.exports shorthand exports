@@ -1,0 +1,23 @@
+We can use export instead of moduleexport but we need to keep in mind that we need to mutate the object we can not replace the export object
+as object are passed by reference in javascript if we replace the exports it will then start pointing to some other value
+
+example 
+
+exports = function(){
+console.log("Hello")
+}
+
+console.log(module.exports); // outputs empty object
+console.log(exports); // this will output a function 
+
+so insted we can use to mutate then it will point to the same object
+
+exports.greet = function(){
+console.log("Hello");
+}
+
+console.log(module.exports); // outputs is same
+console.log(exports); //same output
+-----------------------------------------------
+
+So instead of remembering this and get a chance to make mistakes use module.exports insted!!!!!!!!
