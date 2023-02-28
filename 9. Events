@@ -53,3 +53,5 @@ emtr.emit("click1"); // output- > event emitted 2
 ---------------------------------
 
 Now e have learned how node events.js works on higher levler we will just go ahead ans delete out emmiter.js and use node events.js module
+
+// and it works!!!!!
