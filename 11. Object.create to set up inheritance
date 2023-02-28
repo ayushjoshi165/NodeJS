@@ -1,0 +1,21 @@
+So again, Object.create is a very simple,
+
+clean and clear way to set up
+
+a sequence of objects,
+
+objects that inherit from one another,
+
+a prototype chain.
+
+And so this idea of setting this up,
+
+is key to understanding how the event emitter
+
+becomes a fundamental, core piece upon which
+
+many other elements inside Node.js's core
+
+are constructed.
+
+See image1-------------------
