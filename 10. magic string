@@ -1,0 +1,35 @@
+It a string has a special meaning in out code than it is called amgic string, but its not a good idea to rely on a sting to type it correctly 
+because out tools VS code and debugger wont help to get rid of erroe if we made mistake in typing the string correctly
+
+so we will create a congig file and put out string in there 
+
+
+config.js
+
+module.exports = {
+events:{
+
+CLICK: 'click'
+}
+}
+
+and then use config file to get the exact string
+
+var Emitter = require("events");
+var config = require("./config.js");
+var emtr = new Emitter();
+
+emtr.on(config.events.CLICK, function () { // like this 
+  console.log("Event emitted 1");
+});
+
+emtr.on("click2", function () {
+  console.log("Event emitted 2");
+});
+
+console.log("Hello");
+
+emtr.emit(config.events.CLICK); // and like this 
+emtr.emit("click2");
+
+-----------------------------------------------------------
