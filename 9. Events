@@ -1,0 +1,53 @@
+Lwts create out own emitter using javascript
+
+
+emmiter.js
+----------------------------
+
+
+function Emitter() {
+  this.events = {};
+}
+
+//  we added 2 property on its prototype on and emit, in on we will push type and listener function which then we will emit using emit method 
+// by iterating through that array
+
+Emitter.prototype.on = function (type, listener) {
+  this.events[type] = events[type] || []; // first we are using function constructor to create an object with property type is not then we will make sure to add and array
+  this.events[type].push(listener); // now we will push every listener to that array and later will call it to emit by iterating to the array
+};
+
+// for each array item we will call the function to execute the listener
+
+Emitter.prototype.emit = function (type) {
+  if (this.events[type]) {
+    this.events[type].forEach(function (listener) {
+      listener();
+    });
+  }
+};
+
+module.exports = Emitter;
+------------------
+
+app.js
+
+---------
+var Emitter = require("./Emitter");
+
+var emtr = new Emitter();
+
+emtr.on("click", function () {
+  console.log("Event emitted 1");
+});
+
+emtr.on("click2", function () {
+  console.log("Event emitted 2");
+});
+
+console.log("Hello");
+
+emtr.emit("click");// output Event emitted 1
+emtr.emit("click1"); // output- > event emitted 2
+
+---------------------------------
