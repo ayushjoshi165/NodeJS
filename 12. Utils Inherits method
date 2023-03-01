@@ -1,0 +1,36 @@
+We can add an object to to the prototype chain by using utils inherits property 
+like 
+
+var util = require("util");
+var EventEmitter = require("events");
+
+function Greetr() {
+  this.greetings = "Hello there";
+}
+
+util.inherits(Greetr, EventEmitter);
+// now the object created by Greetr will get access to the methods of events librabry like on and emit methods etc
+
+Greetr.prototype.greet = function () {
+  console.log("Greetings!!");
+  this.emit("greet"); // when .om method will get the event type it will emit it whose implmentation in written below
+};
+
+// now lets crreate an object using out functuion constructor Greetr
+
+var greetr = new Greetr();
+
+// now i can call methods and properties for it and its protoype chain
+
+console.log(greetr.greetings);
+
+greetr.on("greet", function () {
+  console.log("Event emitted");
+});
+
+greetr.greet();
+
+output is :
+Hello there
+Greetings!!
+Event emitted
