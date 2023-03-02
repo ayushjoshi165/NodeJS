@@ -17,3 +17,11 @@ that will run on all browsers.
 -----------
 Template literal  :  ' ${myVaraible}'
 
+
+---------------------------------------------------
+
+When we use util.inherits method it only give acess to method and properties on prototype but to acess the methods defined in the function constructors 
+we used .call and pass (this) to it.
+
+// now we have acess to all the properties defined insode the function constructors .
+
