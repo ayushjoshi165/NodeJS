@@ -1,0 +1,15 @@
+If you're interested in writing ES6
+
+in the browser and have it work everywhere,
+
+you can take a look at babeljs.io.
+
+And what that does it takes the new features
+
+in Javascript, lets you write them,
+
+then it converts the code you write
+
+into older Javascript into something
+
+that will run on all browsers.
