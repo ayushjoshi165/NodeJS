@@ -1,0 +1,8 @@
+ when we talk about web sockets,
+
+we're talking about keeping the socket open.
+
+
+sockets : evertime we request data we open a new socket, TCP/IP enable us to send data, and just like streams they are sent as packets
+basically the same idea as streams
+
