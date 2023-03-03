@@ -1,0 +1,8 @@
+In NodeJs there ate two parts of code 
+1) C++ core which comtains system events
+2) Javascript code which contains custom events ( Event Emitter) 
+
+we have seen that the node handles asynchromously by running the task in libuv while other code is rum=nning anf then give it back to v8 engine once the engine is free
+
+
+
