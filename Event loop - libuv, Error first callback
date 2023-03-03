@@ -1,0 +1,21 @@
+we see hoe libuv enable javascript to perform asynchronously so while reading the file using fs module
+
+Libuv will go and ask the OS to do the work,
+
+and then when the event is complete,
+
+when it has finished reading the file,
+
+please run this JavaScript code.
+
+So this is the event loop,
+
+and it might take a long time for this file to be read;
+
+and that's okay because the JavaScript code will simply
+
+keep running and then the event loop will keep checking
+
+and when the file is finished reading and I have my string,
+
+it will say you can now run this callback.
