@@ -50,3 +50,7 @@ And that helps me in structuring my functions.
 
 So, I have an error-first callback
 
+---------------------------\\
+
+__dirname is an environment variable that tells you the absolute path of the directory containing the currently executing file.
+
