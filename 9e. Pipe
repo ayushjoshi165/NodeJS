@@ -1,0 +1,33 @@
+A pipe.
+
+That's how you connect two streams.
+
+You write to one stream
+
+what is being read from another.
+
+So, a node you can pipe from a readable stream
+
+to a writeable stream,
+
+and that makes sense
+
+because if you're going to read,
+
+the stream has to be readable,
+
+and if you're going to write,
+
+the stream has to be writeable.
+
+So, you pipe from a readable,
+
+I'm reading what's coming in, each chunk
+
+and then I'm writing to the writeable stream that chunk,
+
+what we just did when we copied the files.
+
+But to see this visually,
+
+we can imagine a readable stream
