@@ -19,3 +19,34 @@ keep running and then the event loop will keep checking
 and when the file is finished reading and I have my string,
 
 it will say you can now run this callback.
+
+---------------------------------
+
+Error first callback - imp interview question 
+
+It just means by default, by standard,
+
+if you give me a function for a callback,
+
+the first parameter I will pass to you is an error;
+
+and if there was no error, I'll just give you a null
+
+in that first parameter and then we go on
+
+with the rest of the parameters.
+
+So the first parameter is an error,
+
+and that helps because maybe you have different orders
+
+of parameters, different numbers of parameters,
+
+different callbacks; but I can always rely
+
+on the fact that the first parameter is the error.
+
+And that helps me in structuring my functions.
+
+So, I have an error-first callback
+
