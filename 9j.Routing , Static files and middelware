@@ -1,0 +1,10 @@
+Best way to learn is to go to express and see the routing section 
+
+we have routing flexibility in express we can pull out data from url 
+using example : req.params.id
+
+----------------------------------------------
+Middleware : what all happens between req and response
+
+-----------
+
