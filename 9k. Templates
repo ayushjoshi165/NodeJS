@@ -1,0 +1,33 @@
+Templates in Express is a utility and by using templates we can write a simple text and then ultimately that will
+be converted into an HTML and to use it we just need to specify the view engine and then extension of file
+
+we can use it by installing the template engine using npm and then app.set as below
+
+
+created view folder as it will look in the views folder
+
+person.ejs
+----------------
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link href="/assets/style.css" type="text/css" rel="stylesheet" />
+    <title>Document</title>
+  </head>
+  <body>
+    Person : <%=ID %> // here it will automatically pick the ID varaible as we passed it in out middleware
+  </body>
+</html>
+---------------------
+app.js
+
+
+
+app.set('view engine' , 'ejs');
+
+app.get('/person/:id', function(req,res){
+    res.render('person', {ID : req.params.id})
+
+})
+
+we saw an issue of loading style.css because we have person in the url and to fix that we put "/" in front of asset to tell that is from root
