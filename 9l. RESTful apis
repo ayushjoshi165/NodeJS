@@ -1,0 +1,177 @@
+Let's talk for a moment about
+
+something you've either done,
+
+or probably have heard of or read about,
+
+RESTful APIs and JSON made easy with Express.
+
+So, what is REST?
+
+Big word alert.
+
+REST is an architectural style for building APIs.
+
+It stands for representational state transfer.
+
+Which sounds really complicated,
+
+but all it really means is that
+
+when we handle HTTP requests,
+
+we decide that the verbs and the URLs mean something.
+
+When we build our APIs, we build them in a way
+
+that the verbs and URLs mean something,
+
+because it's up to us how we handle the requests
+
+on the server.
+
+We could come up with some complex way of
+
+sending and receiving all data through just get requests.
+
+But, REST is a way of saying,
+
+let's standardise on a way of using the HTTP requests
+
+so that when they're sent, when you read them,
+
+they kind of match what's actually happening.
+
+What do we mean by that?
+
+In our example that we've been working with,
+
+we pulled out HTML in response to get request
+
+in response to post request,
+
+in response to JSONParser request,
+
+but let's just get rid of this ajax post for a moment,
+
+and just talk about what RESTful interface would look like.
+
+What a RESTful API would look like.
+
+So, I might, for example, have this posted JSON data
+
+that is a person.
+
+And within it, I would likely save to the database,
+
+or something like that.
+
+And it might just be a /API/person address
+
+that's posted to with JSON format,
+
+and then I might have an API/person/a particular ID,
+
+and it would go out and get that data
+
+from the database for that particular person.
+
+And then if I was to delete this person,
+
+I might have a delete, which is also an HTTP method.
+
+So I could say that same address,
+
+some ID that is given, which person to delete,
+
+and then in here I would delete from the database.
+
+So that's the general idea.
+
+This is the idea, these right here,
+
+is an example of the idea of a RESTful API.
+
+And all that REST really means is that,
+
+well, sometimes we've built APIs
+
+where we just handle things, for example, in the URL.
+
+Where I might say, well, /delete.
+
+And that will be the delete URL,
+
+and /post will be the post URL.
+
+But the problem is, is that it's hard to judge them,
+
+what the HTTP request is supposed to do
+
+if you were just looking at the request.
+
+The HTTP request already has these verbs
+
+given to us so that we can respond to them.
+
+So, having a RESTful API means that
+
+you design your API so that it responds
+
+to the HTTP request verbs, the methods,
+
+in the way that it's expected.
+
+And you also look at the URL
+
+and understand what it's doing.
+
+So if I combine this URL, I see /person and an ID,
+
+and I combine that with the HTTP method being used,
+
+I can pretty much guess what this is going to do.
+
+I sent an HTTP request with the delete verb
+
+to a /person address, with an ID,
+
+I can pretty much guess that this API is going to
+
+delete that person out of the database.
+
+And that's all the idea of a RESTful API really is.
+
+Typically, it accepts and returns JSON,
+
+and deals with the standard HTTP request methods, the verbs,
+
+has decent, good URLs that are clear
+
+as far as what they do.
+
+And that makes it very easy to use.
+
+So, when you hear the phrase,
+
+we can build a RESTful API,
+
+don't be confused or intimidated by it.
+
+It just means, follow a good URL structure,
+
+and deal with HTTP methods
+
+the way that one would anticipate.
+
+And that's made very easy with Express
+
+because it already allows us to deal with different methods
+
+in this very direct way.
+
+Just calling a function, mapping to a URL,
+
+and giving it a callback.
+
+So it's very simple to build basic REST APIs with Express.
