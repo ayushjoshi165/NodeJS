@@ -1,0 +1,19 @@
+this is often a misunderstanding with web developers.
+
+The DOM doesn't live inside the JavaScript engine really.
+
+The browser uses the DOM to render the webpage
+
+and gives JavaScript access to the DOM,
+
+gives it features, so that it can
+
+manipulate the DOM under the hood.
+
+And when the DOM is changed, then the browser
+
+will automatically regenerate,
+
+recreate, re-render, the webpage,
+
+and this is the basis for modern web applications.
